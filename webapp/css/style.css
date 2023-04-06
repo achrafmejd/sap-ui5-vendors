@@ -9,4 +9,65 @@
     padding: 0.5em;
 }
 
+.sapMGT {
+   
+    box-shadow: 0 0 0.125rem 0 rgba(85,107,130,0.16), 0 0.125rem 0.25rem 0 rgba(85,107,130,0.16);
+    width: 9em!important;
+    height: 9em!important;
+}
+
+.sapMTextMaxLine {
+    display: block;
+    font-size: 11px;
+}
+
+.sapMGTSubHdrTxt>.sapMText, .sapMGTSubHdrTxt {
+    font-size: .550rem;
+    margin-top: 0.1em;
+}
+
+.sapSuiteRMC.sapSuiteRMCLookS .sapSuiteRMCFont {
+    font-size: .50rem;
+}
+
+.sapSuiteRMCVerticalAlignmentContainer .sapSuiteRMCInnerContainer {
+    position: relative;
+    height: 80%;
+    display: inline-block;
+}
+
+.sapMGTHdrContent {
+    height: 3.1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sapMTileCntFtrTxt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    left: 0px;
+    box-sizing: border-box;
+    height: 1rem;
+    bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: normal;
+    font-family: "72","72full",Arial,Helvetica,sans-serif;
+    font-size: .6rem;
+    font-weight: normal;
+    top: 50%;
+}
+
+.sapSuiteRMCVerticalAlignmentContainer .sapSuiteRMCInnerContainer {
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    width: 45%!important;
+}
+
 /* VendordMain CSS - End */

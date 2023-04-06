@@ -3,10 +3,23 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:mc="sap.suite.ui.microchart"
+	xmlns:sfb="sap.ui.comp.smartfilterbar"
 	>
+	 	<!-- SmartFilterBar - Start -->
+        <sfb:SmartFilterBar
+		    id="smartFilterBar"
+		    entitySet="VENDORSHeadersSetSet"
+		    basicSearchFieldName="Lifnr"
+		    persistencyKey="UniqueAndStablePersistencyKey">
+            <sfb:controlConfiguration>
+                <sfb:ControlConfiguration id="_IDGenControlConfiguration1" key="" mandatory="mandatory" visibleInAdvancedArea="true" filterType="single" />
+            </sfb:controlConfiguration>
+        </sfb:SmartFilterBar>
+		<!-- SmartFilterBar - End -->
 
+		<!-- Tiles Statistics - Start -->
 		<FlexBox id="_IDGenFlexBox1" class="flexbox-tiles-container" direction="Row" justifyContent="SpaceAround">
-			<GenericTile id="_IDGenGenericTile11" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+			<GenericTile id="_IDGenGenericTile1" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
 				<tileContent>
 					<TileContent id="_IDGenTileContent1" footer="Some footer">
 						<content>
@@ -15,7 +28,6 @@
 					</TileContent>
 				</tileContent>
 			</GenericTile>
-
 			<GenericTile id="_IDGenGenericTile2" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
 				<tileContent>
 					<TileContent id="_IDGenTileContent22" footer="Some footer">
@@ -25,7 +37,6 @@
 					</TileContent>
 				</tileContent>
 			</GenericTile>
-
 			<GenericTile id="_IDGenGenericTile3" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
 				<tileContent>
 					<TileContent id="_IDGenTileContent33" footer="Some footer">
@@ -36,6 +47,10 @@
 				</tileContent>
 			</GenericTile>
 		</FlexBox>
+		<!-- Tiles Statistics - End -->
+
+		<!-- Grid Table - Start -->
 		
+		<!-- Grid Table - End -->
 </mvc:View>
 
