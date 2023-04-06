@@ -20,29 +20,29 @@
 
 		<!-- Tiles Statistics - Start -->
 		<FlexBox id="_IDGenFlexBox1" class="flexbox-tiles-container" direction="Row" justifyContent="SpaceAround">
-			<GenericTile id="_IDGenGenericTile1" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+			<GenericTile id="_IDGenGenericTile1" press="press" header="Fournisseurs" subheader="basé au Maroc" frameType="OneByOne">
 				<tileContent>
-					<TileContent id="_IDGenTileContent1" footer="Some footer">
+					<TileContent id="_IDGenTileContent1" >
 						<content>
-							<mc:RadialMicroChart id="_IDGenRadialMicroChart1" size="Responsive" percentage="99.9" alignContent="Right" valueColor="Neutral"/>
+							<mc:RadialMicroChart id="_IDGenRadialMicroChart1" size="Responsive" percentage="0.00" alignContent="Right" valueColor="Neutral"/>
 						</content>
 					</TileContent>
 				</tileContent>
 			</GenericTile>
-			<GenericTile id="_IDGenGenericTile2" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+			<GenericTile id="_IDGenGenericTile2" press="press" header="Fournisseurs" subheader="francophones" frameType="OneByOne">
 				<tileContent>
-					<TileContent id="_IDGenTileContent22" footer="Some footer">
+					<TileContent id="_IDGenTileContent22">
 						<content>
-							<mc:RadialMicroChart id="_IDGenRadialMicroChart2" size="Responsive" percentage="99.9" alignContent="Right" valueColor="Neutral"/>
+							<mc:RadialMicroChart id="_IDGenRadialMicroChart2" size="Responsive" percentage="0.00" alignContent="Right" valueColor="Neutral"/>
 						</content>
 					</TileContent>
 				</tileContent>
 			</GenericTile>
-			<GenericTile id="_IDGenGenericTile3" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+			<GenericTile id="_IDGenGenericTile3" press="press" header="Fournisseurs" subheader="personne phyisique" frameType="OneByOne">
 				<tileContent>
-					<TileContent id="_IDGenTileContent33" footer="Some footer">
+					<TileContent id="_IDGenTileContent33">
 						<content>
-							<mc:RadialMicroChart id="_IDGenRadialMicroChart3" size="Responsive" percentage="99.9" alignContent="Right" valueColor="Neutral"/>
+							<mc:RadialMicroChart id="_IDGenRadialMicroChart3" size="Responsive" percentage="0.00" alignContent="Right" valueColor="Neutral"/>
 						</content>
 					</TileContent>
 				</tileContent>
