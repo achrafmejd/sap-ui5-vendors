@@ -1,0 +1,41 @@
+<mvc:View
+	controllerName="vendors.controller.VendorsMain"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:mc="sap.suite.ui.microchart"
+	>
+
+		<FlexBox id="_IDGenFlexBox1" class="flexbox-tiles-container" direction="Row" justifyContent="SpaceAround">
+			<GenericTile id="_IDGenGenericTile11" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+				<tileContent>
+					<TileContent id="_IDGenTileContent1" footer="Some footer">
+						<content>
+							<mc:RadialMicroChart id="_IDGenRadialMicroChart1" size="Responsive" percentage="99.9" alignContent="Right" valueColor="Neutral"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="_IDGenGenericTile2" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+				<tileContent>
+					<TileContent id="_IDGenTileContent22" footer="Some footer">
+						<content>
+							<mc:RadialMicroChart id="_IDGenRadialMicroChart2" size="Responsive" percentage="99.9" alignContent="Right" valueColor="Neutral"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="_IDGenGenericTile3" press="press" header="This is OneByOne tile with" subheader="a RadialMicroChart" frameType="OneByOne">
+				<tileContent>
+					<TileContent id="_IDGenTileContent33" footer="Some footer">
+						<content>
+							<mc:RadialMicroChart id="_IDGenRadialMicroChart3" size="Responsive" percentage="99.9" alignContent="Right" valueColor="Neutral"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		</FlexBox>
+		
+</mvc:View>
+
