@@ -4,6 +4,7 @@
 	xmlns="sap.m"
 	xmlns:mc="sap.suite.ui.microchart"
 	xmlns:sfb="sap.ui.comp.smartfilterbar"
+	xmlns:table="sap.ui.table"
 	>
 	 	<!-- SmartFilterBar - Start -->
         <sfb:SmartFilterBar
@@ -12,7 +13,7 @@
 		    basicSearchFieldName="Lifnr"
 		    persistencyKey="UniqueAndStablePersistencyKey">
             <sfb:controlConfiguration>
-                <sfb:ControlConfiguration id="_IDGenControlConfiguration1" key="" mandatory="mandatory" visibleInAdvancedArea="true" filterType="single" />
+                <sfb:ControlConfiguration id="_IDGenControlConfiguration1" key="Lifnr" visibleInAdvancedArea="true" filterType="single" />
             </sfb:controlConfiguration>
         </sfb:SmartFilterBar>
 		<!-- SmartFilterBar - End -->
@@ -50,7 +51,66 @@
 		<!-- Tiles Statistics - End -->
 
 		<!-- Grid Table - Start -->
-		
+		 <table:Table id="table"  rows="{/}" enableColumnFreeze="true" selectionMode="None">
+            <table:columns>
+                <!-- Columns Group  1 : Product & SalesOrder - Start -->
+                <table:Column id="_IDGenColumn1">
+						<table:multiLabels>
+							<Label id="_IDGenLabel1" text="{i18n>Lifnr}" textAlign="Center" width="100%"/>
+						</table:multiLabels>
+						<table:template>
+							<Text id="_IDGenText1" text="{Lifnr}" wrapping="false"/>
+						</table:template>
+				</table:Column>
+                  
+				<table:Column id="_IDGenColumn2">
+						<table:multiLabels>
+							<Label id="_IDGenLabel2" text="{i18n>Land1}" textAlign="Center" width="100%"/>
+						</table:multiLabels>
+						<table:template>
+							<Text id="_IDGenText2" text="{Land1}" wrapping="false"/>
+						</table:template>
+				</table:Column>
+
+				<table:Column id="_IDGenColumn3">
+						<table:multiLabels>
+							<Label id="_IDGenLabel3" text="{i18n>Name1}" textAlign="Center" width="100%"/>
+						</table:multiLabels>
+						<table:template>
+							<Text id="_IDGenText3" text="{Name1}" wrapping="false"/>
+						</table:template>
+				</table:Column>
+
+				<table:Column id="_IDGenColumn4">
+						<table:multiLabels>
+							<Label id="_IDGenLabel4" text="{i18n>Location}" textAlign="Center" width="100%"/>
+						</table:multiLabels>
+						<table:template>
+							<Text id="_IDGenText4" text="{= ${Stras}}" wrapping="false"/>
+							<!-- <Text id= "_IDGenText4" text="{= ${Stras Ort01 Pstmz}}" wrapping="false"/> -->
+						</table:template>
+				</table:Column>
+
+				<table:Column id="_IDGenColumn7">
+						<table:multiLabels>
+							<Label id="_IDGenLabel7" text="{i18n>Telf1}" textAlign="Center" width="100%"/>
+						</table:multiLabels>
+						<table:template>
+							<Text id="_IDGenText7" text="{Telf1}" wrapping="false"/>
+						</table:template>
+				</table:Column>
+
+				<!-- <table:Column id="_IDGenColumn8">
+						<table:multiLabels>
+							<Label id="_IDGenLabel8" text="{i18n>Stcd1}" textAlign="Center" width="100%"/>
+						</table:multiLabels>
+						<table:template>
+							<Text id="_IDGenText8" text="{Stcd1}" wrapping="false"/>
+						</table:template>
+				</table:Column> -->
+                          
+            </table:columns>
+		 </table:Table>
 		<!-- Grid Table - End -->
 </mvc:View>
 
