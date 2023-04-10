@@ -6,8 +6,13 @@
         xmlns:sfb="sap.ui.comp.smartfilterbar"
         xmlns:table="sap.ui.table"
 	>
-    <Text id="_IDGenText1" text="Hello achraf"></Text>
-    <Text id="_IDGenText2" text="ID: {data>id}" />
-    <Text id="_IDGenText3" text="Object: {data>object>Lifnr}" />
+    <Page id="_IDGenPage1"
+		title="{i18n>singleVendorPage}"
+		showNavButton="true"
+		navButtonPress=".onNavBack">
+		<!-- <ObjectHeader id="_IDGenObjectHeader1"
+			intro="{vendor>Lifnr}"
+			title="{vendor>Lifnr}"/> -->
+	</Page>
 </mvc:View>
 

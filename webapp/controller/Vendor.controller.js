@@ -1,10 +1,12 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/routing/History"
+
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, History) {
         "use strict";
 
         return Controller.extend("vendors.controller.Vendor", {
@@ -15,8 +17,18 @@ sap.ui.define([
             _onRouteMatched: function(oEvent) {
                 const oSelectedItem = oEvent.getParameter("arguments").id; // Access the passed parameter from the first view
                 console.log("HELLO FROM THE SECOND VIE<");
-                console.log(oSelectedItem);
-
+                console.log(JSON.parse(oSelectedItem));
+            },
+            onNavBack: function(){
+                var oHistory = History.getInstance();
+                var sPreviousHash = oHistory.getPreviousHash();
+    
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1);
+                } else {
+                    var oRouter = this.getOwnerComponent().getRouter();
+                    oRouter.navTo("RouteVendorsMain", {}, true);
+                }
             }
         });
     });

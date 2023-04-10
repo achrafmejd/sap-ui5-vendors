@@ -85,8 +85,7 @@ sap.ui.define([
                                                     const oRouter = sap.ui.core.UIComponent.getRouterFor(that);
                                                     if(oRouter){
                                                         oRouter.navTo("RouteVendorSingleObjectPage", {
-                                                            id: oSelectedRowData.Lifnr,
-                                                            object: oSelectedRowData
+                                                            id: JSON.stringify(oSelectedRowData),
                                                         })
                                                     }else{
                                                         alert('Error in routing ! Check console')
