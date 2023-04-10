@@ -55,6 +55,37 @@
 		 	<table:extension>
 				<OverflowToolbar id="_IDGenOverflowToolbar1" style="Clear">
 					<Title id="title" text="Table des Fournisseurs"/>
+					<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+					<Button 
+						id="_IDGenButton1"
+						icon="sap-icon://activities"
+						tooltip="show indices of selected items"
+						press="onGetSelectedIndices"/>
+					<Button 
+						id="_IDGenButton2"
+						icon="sap-icon://activity-items"
+						tooltip="show context of latest selection item"
+						press="onGetContextByIndex"/>
+					<Button 
+						id="_IDGenButton3"
+						icon="sap-icon://decline"
+						tooltip="clear selection"
+						press="onClearSelection"/>
+					<Switch 
+						id="_IDGenSwitch1"
+						state="true"
+						customTextOn="on"
+						customTextOff="off"
+						tooltip="enable select all items"
+						change="onSwitchChange"/>
+				</OverflowToolbar>
+				<OverflowToolbar id="_IDGenOverflowToolbar2" >
+					<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+					<SearchField id="_IDGenSearchField1"
+								placeholder="Filter"
+								value="{ui>/globalFilter}"
+								search="filterGlobally"
+								width="15rem"/>
 				</OverflowToolbar>
 			</table:extension>
             <table:columns>

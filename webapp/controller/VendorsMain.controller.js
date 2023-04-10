@@ -6,11 +6,12 @@ sap.ui.define([
     "sap/ui/table/RowSettings",
     "sap/ui/table/RowAction",
     "sap/ui/table/RowActionItem",
+    "sap/m/MessageToast",
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, RadialMicroChart, Filter, FilterOperator, RowSettings, RowAction, RowActionItem) {
+    function (Controller, RadialMicroChart, Filter, FilterOperator, RowSettings, RowAction, RowActionItem, MessageToast) {
         "use strict";
 
         return Controller.extend("vendors.controller.VendorsMain", {
@@ -101,7 +102,35 @@ sap.ui.define([
                     })
 
                 })
-            }
+            },
+            onGetSelectedIndices: function(evt) {
+                var aIndices = this.byId("table").getSelectedIndices();
+                var sMsg;
+                if (aIndices.length < 1) {
+                    sMsg = "no item selected";
+                } else {
+                    sMsg = aIndices;
+                }
+                MessageToast.show(sMsg);
+            },
+            onGetContextByIndex: function(evt) {
+                var oTable = this.byId("table");
+                var iIndex = oTable.getSelectedIndex();
+                var sMsg;
+                if (iIndex < 0) {
+                    sMsg = "no item selected";
+                } else {
+                    sMsg = oTable.getContextByIndex(iIndex);
+                }
+                MessageToast.show(sMsg);
+            },
+            onClearSelection: function(evt) {
+                this.byId("table").clearSelection();
+            },
+            onSwitchChange: function(oEvent) {
+                var oTable = this.byId("table");
+                oTable.setEnableSelectAll(oEvent.getParameter("state"));
+            },
         });
     });
 
