@@ -51,7 +51,7 @@
 		<!-- Tiles Statistics - End -->
 
 		<!-- Grid Table - Start -->
-		 <table:Table id="table"   rows="{/}" enableColumnFreeze="true" selectionMode="MultiToggle">
+		 <table:Table id="table"   rows="{/}" enableColumnFreeze="true" selectionMode="MultiToggle" alternateRowColors="true" rowActionCount="2">
 		 	<table:extension>
 				<OverflowToolbar id="_IDGenOverflowToolbar1" style="Clear">
 					<Title id="title" text="Table des Fournisseurs"/>
