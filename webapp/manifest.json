@@ -100,6 +100,14 @@
             "TargetVendorsMain"
           ]
         }
+        ,{
+          "name": "RouteVendorSingleObjectPage",
+          "pattern": "vendors/{id}",
+          "target" : [
+              "TargetVendorSingleObjectPage"
+          ]
+
+        }
       ],
       "targets": {
         "TargetVendorsMain": {
@@ -108,6 +116,13 @@
           "clearControlAggregation": false,
           "viewId": "VendorsMain",
           "viewName": "VendorsMain"
+        },
+        "TargetVendorSingleObjectPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Vendor",
+          "viewName": "Vendor"
         }
       }
     },

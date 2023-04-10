@@ -1,0 +1,13 @@
+<mvc:View
+        controllerName="vendors.controller.Vendor"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:mc="sap.suite.ui.microchart"
+        xmlns:sfb="sap.ui.comp.smartfilterbar"
+        xmlns:table="sap.ui.table"
+	>
+    <Text id="_IDGenText1" text="Hello achraf"></Text>
+    <Text id="_IDGenText2" text="ID: {data>id}" />
+    <Text id="_IDGenText3" text="Object: {data>object>Lifnr}" />
+</mvc:View>
+

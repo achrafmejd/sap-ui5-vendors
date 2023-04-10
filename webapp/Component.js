@@ -3,11 +3,12 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "vendors/model/models"
-    ],
-    function (UIComponent, Device, models) {
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "vendors/model/models",
+    "sap/m/routing/Router"
+],
+    function (UIComponent, Device, models, Router) {
         "use strict";
 
         return UIComponent.extend("vendors.Component", {
@@ -30,6 +31,7 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
             }
         });
     }

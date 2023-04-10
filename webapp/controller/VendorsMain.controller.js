@@ -68,16 +68,37 @@ sap.ui.define([
 
                                 /** ################## Access to the Item - Start  #################### */
                                 const handler = () => {
-                                    var oTemplate = new RowAction({items: [
-                                        new RowActionItem({
-                                            type: "Navigation",
-                                            press: ()=>{},
-                                            visible: "{Available}"
-                                        })
-                                    ]});
+                                    var oTemplate = new RowAction({
+                                        items: [
+                                            new RowActionItem({
+                                                type: "Navigation",
+                                                press: (oEvent) => {
+                                                    const oSelectedItem = oEvent.getSource().getParent().getParent(); // Get the selected row
+                                                    const oBindingContext = oSelectedItem.getBindingContext(); // Get the binding context of the selected row
+                                                    const sPath = oBindingContext.getPath(); // Get the path of the selected row
+                                                    const oModel = oBindingContext.getModel(); // Get the model of the selected row
+
+                                                    // Get the data of the selected row
+                                                    const oSelectedRowData = oModel.getProperty(sPath);
+                                                    console.log(oSelectedRowData);
+
+                                                    const oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+                                                    if(oRouter){
+                                                        oRouter.navTo("RouteVendorSingleObjectPage", {
+                                                            id: oSelectedRowData.Lifnr,
+                                                            object: oSelectedRowData
+                                                        })
+                                                    }else{
+                                                        alert('Error in routing ! Check console')
+                                                    }
+                                                },
+                                                visible: "{Available}"
+                                            })
+                                        ]
+                                    });
                                     return [1, oTemplate];
                                 }
-                
+
                                 var oTable = that.getView().byId("table");
                                 var iCount = 0;
                                 var oTemplate = oTable.getRowActionTemplate()
@@ -89,12 +110,12 @@ sap.ui.define([
                                 console.log(aRes);
                                 iCount = aRes[0];
                                 oTemplate = aRes[1];
-                                
+
                                 oTable.setRowActionTemplate(oTemplate);
                                 oTable.setRowActionCount(iCount);
                                 /** ################## Access to the Item - End  #################### */
                             }
-                            
+
                         },
                         error: function (err) {
                             console.log(err);
@@ -103,7 +124,7 @@ sap.ui.define([
 
                 })
             },
-            onGetSelectedIndices: function(evt) {
+            onGetSelectedIndices: function (evt) {
                 var aIndices = this.byId("table").getSelectedIndices();
                 var sMsg;
                 if (aIndices.length < 1) {
@@ -113,7 +134,7 @@ sap.ui.define([
                 }
                 MessageToast.show(sMsg);
             },
-            onGetContextByIndex: function(evt) {
+            onGetContextByIndex: function (evt) {
                 var oTable = this.byId("table");
                 var iIndex = oTable.getSelectedIndex();
                 var sMsg;
@@ -124,10 +145,10 @@ sap.ui.define([
                 }
                 MessageToast.show(sMsg);
             },
-            onClearSelection: function(evt) {
+            onClearSelection: function (evt) {
                 this.byId("table").clearSelection();
             },
-            onSwitchChange: function(oEvent) {
+            onSwitchChange: function (oEvent) {
                 var oTable = this.byId("table");
                 oTable.setEnableSelectAll(oEvent.getParameter("state"));
             },
