@@ -20,7 +20,7 @@
 
 		<!-- Tiles Statistics - Start -->
 		<FlexBox id="_IDGenFlexBox1" class="flexbox-tiles-container" direction="Row" justifyContent="SpaceAround">
-			<GenericTile id="_IDGenGenericTile1" press="press" header="Fournisseurs" subheader="basé au Maroc" frameType="OneByOne">
+			<GenericTile id="_IDGenGenericTile1" press="press" header="Fournisseurs" subheader="basé au Maroc" frameType="TwoByOne">
 				<tileContent>
 					<TileContent id="_IDGenTileContent1" >
 						<content>
@@ -51,7 +51,12 @@
 		<!-- Tiles Statistics - End -->
 
 		<!-- Grid Table - Start -->
-		 <table:Table id="table"  rows="{/}" enableColumnFreeze="true" selectionMode="None">
+		 <table:Table id="table"   rows="{/}" enableColumnFreeze="true" selectionMode="MultiToggle">
+		 	<table:extension>
+				<OverflowToolbar id="_IDGenOverflowToolbar1" style="Clear">
+					<Title id="title" text="Table des Fournisseurs"/>
+				</OverflowToolbar>
+			</table:extension>
             <table:columns>
                 <!-- Columns Group  1 : Product & SalesOrder - Start -->
                 <table:Column id="_IDGenColumn1">
@@ -100,15 +105,6 @@
 						</table:template>
 				</table:Column>
 
-				<!-- <table:Column id="_IDGenColumn8">
-						<table:multiLabels>
-							<Label id="_IDGenLabel8" text="{i18n>Stcd1}" textAlign="Center" width="100%"/>
-						</table:multiLabels>
-						<table:template>
-							<Text id="_IDGenText8" text="{Stcd1}" wrapping="false"/>
-						</table:template>
-				</table:Column> -->
-                          
             </table:columns>
 		 </table:Table>
 		<!-- Grid Table - End -->

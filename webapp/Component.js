@@ -21,6 +21,7 @@ sap.ui.define([
              * @override
              */
             init: function () {
+                sap.ui.getCore().getConfiguration().setLanguage("fr");
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
 
