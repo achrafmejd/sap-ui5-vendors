@@ -7,8 +7,6 @@
 		xmlns:chart="sap.suite.ui.commons"
 		xmlns:layout="sap.ui.layout"
 		xmlns:mc="sap.suite.ui.microchart"
-
-		
 	>
     <Page id="_IDGenPage1"
 		title="{i18n>singleVendorPage}"
@@ -16,9 +14,9 @@
 		navButtonPress=".onNavBack">
 		
 		<!-- Flex box Start - Top of the page buttons -->
-		<FlexBox id="_IDGenFlexBox1" class="panel-button-container">
-            <Button type="Accept" icon="sap-icon://edit" class="" id="_edit" text="Edit" press=".onOpenDialog" />
-            <Button type="Reject" icon="sap-icon://sys-cancel-2" class="" id="_delete" text="Delete" press=".onDelete" />
+		<FlexBox id="_IDGenFlexBox1" class="panel-button-container" justifyContent="SpaceBetween">
+				<Button type="Accept" icon="sap-icon://edit" class="" id="_edit" text="Edit" press=".onOpenDialog" />
+				<Button type="Reject" icon="sap-icon://sys-cancel-2" class="" id="_delete" text="Delete" press=".onDelete" />
         </FlexBox>
 		<!-- Flex box End - Top of the page buttons -->
 
@@ -26,16 +24,18 @@
 			<!-- Header of the page - Title info - Start -->
 			 <ObjectHeader
                 id="_IDGenObjectHeader1"
-				icon="sap-icon://building"
-                title="Fournisseur"
+                title="#{Lifnr}"
                 backgroundDesign="Solid"
                 class="objectHeader-title"
             >
 
             </ObjectHeader>
 			<!-- Header of the page - Title info - End -->
+
+
+			<!-- Donut chart - Start -->
 			<viz:Popover id="idPopOver"></viz:Popover>
-			<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='donut' vizProperties="{title:{ text:'ETAT DES COMMANDES DU FOURNISSEUR'}}">
+			<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='donut' vizProperties="{title:{ text:'ETAT DES COMMANDES DU FOURNISSEUR'}, plotArea:{colorPalette:['#0000FF', '#00FF00', '#FF0000']}}">
 				<viz:dataset>
 					<viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/myData}">
 						<viz.data:dimensions>
@@ -53,6 +53,9 @@
 					<viz.feeds:FeedItem id="_IDGenFeedItem2" uid="color" type="Dimension" values="Commande" />
 				</viz:feeds>
 			</viz:VizFrame>
+			<!-- Donut chart - End -->
+
+
 
             <IconTabBar id="_IDGenIconTabBar1" expanded="{device>/isNoPhone}" class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
                 <items>
@@ -63,19 +66,19 @@
                                 <core:Title id="_IDGenTitle1" text="Informations Générales" />
                             </f:title>
                             <Label id="_IDGenLabel6" text="Pays" textAlign="Center"/>
-                            <Text id="_IDGenText6" text="{Description}" />
+                            <Text id="_IDGenText6" text="{= ${Land1} !== '' ? ${Land1} : 'Non spécifié'}" />
                             <Label id="_IDGenLabel1" text="Ville" />
-                            <Text id="_IDGenText1" text="{NbrPieces}" />
+                            <Text id="_IDGenText1" text="{= ${Ort01} !== '' ? ${Ort01} : 'Non spécifié'}" />
                             <Label id="_IDGenLabel2" text="Rue" />
-                            <Text id="_IDGenText2" text="{NbrChambres}" />
+                            <Text id="_IDGenText2" text="{= ${Stras} !== '' ? ${Stras} : 'Non spécifié'}" />
                             <Label id="_IDGenLabel3" text="Code postal" />
-                            <Text id="_IDGenText3" text="{NbrSalleDeBains}" />
+                            <Text id="_IDGenText3" text="{= ${Pstlz} !== '' ? ${Pstlz} : 'Non spécifié'}" />
                             <Label id="_IDGenLabel4" text="Taxe" />
-                            <Text id="_IDGenText4" text="{Superficie} m²" />
+                            <Text id="_IDGenText4" text="{= ${Stcd1} !== '' ? ${Stcd1} : 'Non spécifié'}" />
                             <Label id="_IDGenLabel5" text="Téléphone" />
-                            <Text id="_IDGenText5" text="{Etage}" />
+                            <Text id="_IDGenText5" text="{= ${Telf1} !== '' ? ${Telf1} : 'Non spécifié'}" />
 							<Label id="_IDGenLabel7" text="Type" />
-                            <Text id="_IDGenText7" text="{Etage}" />
+                            <Text id="_IDGenText7" text="{= ${Stkzn} === 'X' ? 'Personne Physique' : 'Autre' }" />
                         </f:SimpleForm>
                     </IconTabFilter>
 					<!-- Tab des informations - End -->

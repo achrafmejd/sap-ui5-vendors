@@ -51,6 +51,12 @@ sap.ui.define([
             _onRouteMatched: function (oEvent) {
                 // Access the passed parameter from the first view
                 const oSelectedItem = oEvent.getParameter("arguments").id; 
+                var jModel = new sap.ui.model.json.JSONModel(JSON.parse(oSelectedItem));
+                console.log(oSelectedItem);
+                this.getView().setModel(jModel);
+                this.getView().bindElement({
+                        path: "/"
+                });
             },
             onNavBack: function () {
                 var oHistory = History.getInstance();
