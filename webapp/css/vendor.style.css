@@ -1,0 +1,24 @@
+/* Styles used for the view - Vendor.view.xml */
+
+.panel-button-container{
+    display: flex;
+    justify-content: end;
+    background: white;
+    padding: 1%;
+    
+}
+
+.panel-button-container > *:nth-child(n) {
+    /* styles */
+    margin-left: 1%;
+}
+
+.objectHeader-title h1 span {
+    font-size: 2rem;
+    margin: 0.1em;
+}
+
+.sapVizFrame{
+    width: 100%;
+    height: 40%!important;
+}

@@ -79,6 +79,9 @@
       "css": [
         {
           "uri": "css/style.css"
+        },
+        {
+          "uri": "css/vendor.style.css"
         }
       ]
     },

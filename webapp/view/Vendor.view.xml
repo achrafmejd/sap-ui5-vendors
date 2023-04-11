@@ -1,18 +1,101 @@
-<mvc:View
+<mvc:View id="_IDGenView1"
         controllerName="vendors.controller.Vendor"
-        xmlns:mvc="sap.ui.core.mvc"
-        xmlns="sap.m"
-        xmlns:mc="sap.suite.ui.microchart"
-        xmlns:sfb="sap.ui.comp.smartfilterbar"
-        xmlns:table="sap.ui.table"
+        xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:w="sap.ui.webc.main" xmlns="sap.m"
+		xmlns:viz="sap.viz.ui5.controls"
+		xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    	xmlns:viz.data="sap.viz.ui5.data" 
+		xmlns:chart="sap.suite.ui.commons"
+		xmlns:layout="sap.ui.layout"
+		xmlns:mc="sap.suite.ui.microchart"
+
+		
 	>
     <Page id="_IDGenPage1"
 		title="{i18n>singleVendorPage}"
 		showNavButton="true"
 		navButtonPress=".onNavBack">
-		<!-- <ObjectHeader id="_IDGenObjectHeader1"
-			intro="{vendor>Lifnr}"
-			title="{vendor>Lifnr}"/> -->
+		
+		<!-- Flex box Start - Top of the page buttons -->
+		<FlexBox id="_IDGenFlexBox1" class="panel-button-container">
+            <Button type="Accept" icon="sap-icon://edit" class="" id="_edit" text="Edit" press=".onOpenDialog" />
+            <Button type="Reject" icon="sap-icon://sys-cancel-2" class="" id="_delete" text="Delete" press=".onDelete" />
+        </FlexBox>
+		<!-- Flex box End - Top of the page buttons -->
+
+		<content>
+			<!-- Header of the page - Title info - Start -->
+			 <ObjectHeader
+                id="_IDGenObjectHeader1"
+				icon="sap-icon://building"
+                title="Fournisseur"
+                backgroundDesign="Solid"
+                class="objectHeader-title"
+            >
+
+            </ObjectHeader>
+			<!-- Header of the page - Title info - End -->
+			<viz:Popover id="idPopOver"></viz:Popover>
+			<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='donut' vizProperties="{title:{ text:'ETAT DES COMMANDES DU FOURNISSEUR'}}">
+				<viz:dataset>
+					<viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/myData}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="Commande"
+									value="{Commande}" />
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Nombre"
+									value="{Nombre}" />
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem id="_IDGenFeedItem1" uid="size" type="Measure" values="Nombre" />
+					<viz.feeds:FeedItem id="_IDGenFeedItem2" uid="color" type="Dimension" values="Commande" />
+				</viz:feeds>
+			</viz:VizFrame>
+
+            <IconTabBar id="_IDGenIconTabBar1" expanded="{device>/isNoPhone}" class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
+                <items>
+					<!-- Tab des informations - Start -->
+                    <IconTabFilter id="_IDGenIconTabFilter1" key="info" text="Info">
+                        <f:SimpleForm id="_IDGenSimpleForm1" minWidth="1024" maxContainerCols="2" layout="ResponsiveGridLayout">
+                            <f:title>
+                                <core:Title id="_IDGenTitle1" text="Informations Générales" />
+                            </f:title>
+                            <Label id="_IDGenLabel6" text="Pays" textAlign="Center"/>
+                            <Text id="_IDGenText6" text="{Description}" />
+                            <Label id="_IDGenLabel1" text="Ville" />
+                            <Text id="_IDGenText1" text="{NbrPieces}" />
+                            <Label id="_IDGenLabel2" text="Rue" />
+                            <Text id="_IDGenText2" text="{NbrChambres}" />
+                            <Label id="_IDGenLabel3" text="Code postal" />
+                            <Text id="_IDGenText3" text="{NbrSalleDeBains}" />
+                            <Label id="_IDGenLabel4" text="Taxe" />
+                            <Text id="_IDGenText4" text="{Superficie} m²" />
+                            <Label id="_IDGenLabel5" text="Téléphone" />
+                            <Text id="_IDGenText5" text="{Etage}" />
+							<Label id="_IDGenLabel7" text="Type" />
+                            <Text id="_IDGenText7" text="{Etage}" />
+                        </f:SimpleForm>
+                    </IconTabFilter>
+					<!-- Tab des informations - End -->
+					
+					<!-- Tab des commandes - Start -->
+                    <IconTabFilter id="_IDGenIconTabFilter2" key="attachments" text="Commandes">
+                        <List id="_IDGenList1" headerText="Liste des Réservations" items="{oListModel>/}" showSeparators="Inner">
+								<StandardListItem 
+									id="_IDGenStandardListItem1"
+									icon="sap-icon://bbyd-active-sales"
+									title="{oListModel>IdReservation}"
+									description="{oListModel>DateDebut}"
+									info="{oListModel>CinLocataire}"
+									 />
+                        </List>
+                    </IconTabFilter>
+					<!-- Tab des commandes - End -->
+                </items>
+            </IconTabBar>
+        </content>
 	</Page>
 </mvc:View>
 
