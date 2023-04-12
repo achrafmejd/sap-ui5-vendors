@@ -34,7 +34,7 @@
 
 
 			<!-- Donut chart - Start -->
-			<viz:Popover id="idPopOver"></viz:Popover>
+			<!-- <viz:Popover id="idPopOver"></viz:Popover>
 			<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='donut' vizProperties="{title:{ text:'ETAT DES COMMANDES DU FOURNISSEUR'}, plotArea:{colorPalette:['#0000FF', '#00FF00', '#FF0000']}}">
 				<viz:dataset>
 					<viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/myData}">
@@ -52,7 +52,7 @@
 					<viz.feeds:FeedItem id="_IDGenFeedItem1" uid="size" type="Measure" values="Nombre" />
 					<viz.feeds:FeedItem id="_IDGenFeedItem2" uid="color" type="Dimension" values="Commande" />
 				</viz:feeds>
-			</viz:VizFrame>
+			</viz:VizFrame> -->
 			<!-- Donut chart - End -->
 
 
