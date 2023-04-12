@@ -53,17 +53,17 @@ sap.ui.define([
                                 that.getView().byId("table").setModel(jModel);
                                 /* ##################"" START - Setting DONUT VALUES - #################### */
                                 // Set static values for RadialMicroChart ---> First one 
-                                var oRadialMicroChart = that.getView().byId("_IDGenRadialMicroChart1");
+                                var oRadialMicroChart = that.getView().byId("_IDGenHarveyBallMicroChartItemFirst");
                                 // Calculate and set values to the view
-                                oRadialMicroChart.setPercentage(that._onGetPercentage(oData, 'Land1', 'MA'));
+                                oRadialMicroChart.setFraction(that._onGetPercentage(oData, 'Land1', 'MA'));
                                 // Set static values for RadialMicroChart ---> Second one 
-                                var oRadialMicroChart = that.getView().byId("_IDGenRadialMicroChart2");
+                                var oRadialMicroChart = that.getView().byId("_IDGenHarveyBallMicroChartItemSecond");
                                 // Calculate and set values to the view
-                                oRadialMicroChart.setPercentage(that._onGetPercentage(oData, 'Spras', 'FR'));
+                                oRadialMicroChart.setFraction(that._onGetPercentage(oData, 'Spras', 'FR'));
                                 // Set static values for RadialMicroChart ---> Third one 
-                                var oRadialMicroChart = that.getView().byId("_IDGenRadialMicroChart3");
+                                var oRadialMicroChart = that.getView().byId("_IDGenHarveyBallMicroChartItemThird");
                                 // Calculate and set values to the view
-                                oRadialMicroChart.setPercentage(that._onGetPercentage(oData, 'Stkzn', 'X'));
+                                oRadialMicroChart.setFraction(that._onGetPercentage(oData, 'Stkzn', 'X'));
                                 /* ##################"" END - Setting DONUT VALUES - #################### */
 
                                 /** ################## Access to the Item - Start  #################### */

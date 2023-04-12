@@ -5,6 +5,7 @@
 	xmlns:mc="sap.suite.ui.microchart"
 	xmlns:sfb="sap.ui.comp.smartfilterbar"
 	xmlns:table="sap.ui.table"
+	
 	>
 	 	<!-- SmartFilterBar - Start -->
         <sfb:SmartFilterBar
@@ -19,35 +20,47 @@
 		<!-- SmartFilterBar - End -->
 
 		<!-- Tiles Statistics - Start -->
-		<FlexBox id="_IDGenFlexBox1" class="flexbox-tiles-container" direction="Row" justifyContent="SpaceAround">
-			<GenericTile id="_IDGenGenericTile1" press="press" header="Fournisseurs" subheader="basé au Maroc" frameType="TwoByOne">
-				<tileContent>
-					<TileContent id="_IDGenTileContent1" >
-						<content>
-							<mc:RadialMicroChart id="_IDGenRadialMicroChart1" size="Responsive" percentage="0.00" alignContent="Right" valueColor="Neutral"/>
-						</content>
-					</TileContent>
-				</tileContent>
-			</GenericTile>
-			<GenericTile id="_IDGenGenericTile2" press="press" header="Fournisseurs" subheader="francophones" frameType="OneByOne">
-				<tileContent>
-					<TileContent id="_IDGenTileContent22">
-						<content>
-							<mc:RadialMicroChart id="_IDGenRadialMicroChart2" size="Responsive" percentage="0.00" alignContent="Right" valueColor="Neutral"/>
-						</content>
-					</TileContent>
-				</tileContent>
-			</GenericTile>
-			<GenericTile id="_IDGenGenericTile3" press="press" header="Fournisseurs" subheader="personne phyisique" frameType="OneByOne">
-				<tileContent>
-					<TileContent id="_IDGenTileContent33">
-						<content>
-							<mc:RadialMicroChart id="_IDGenRadialMicroChart3" size="Responsive" percentage="0.00" alignContent="Right" valueColor="Neutral"/>
-						</content>
-					</TileContent>
-				</tileContent>
-			</GenericTile>
-		</FlexBox>
+		<HBox id="_IDGenHBox1" direction="Row" justifyContent="SpaceAround" class="hbox-container">
+			<VBox id="_IDGenVBox1" class="vbox1" >
+				<mc:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart1111" class="harvey1"  colorPalette="sapUiChartPaletteQualitativeHue1" total="100" size="M" alignContent="Right"
+					totalScale="%">
+					<mc:items>
+						<mc:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItemFirst" fraction="0"
+							fractionScale="%" />
+					</mc:items>
+				</mc:HarveyBallMicroChart>
+				<HBox id="_IDGenHBox2" class="sapUiSmallMarginTop" direction="Row" justifyContent="SpaceAround">
+					<Label id="_IDGenLabel01" class="label-text" text="Fournisseurs Basé au Maroc" design="Bold" />
+				</HBox>
+			</VBox>
+
+			<VBox id="_IDGenVBox2" >
+				<mc:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart111100" total="100"  colorPalette="sapUiChartPaletteQualitativeHue1" size="M" alignContent="Right"
+					totalScale="%">
+					<mc:items>
+						<mc:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItemSecond" fraction="0"
+							fractionScale="%" />
+					</mc:items>
+				</mc:HarveyBallMicroChart>
+				<HBox id="_IDGenHBox21" class="sapUiSmallMarginTop" direction="Row" justifyContent="SpaceAround">
+					<Label id="_IDGenLabel11" class="label-text" text="Fournisseurs Francophones" design="Bold" />
+				</HBox>
+			</VBox>
+
+			<VBox id="_IDGenVBox3" >
+				<mc:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart11110011" total="100"  colorPalette="sapUiChartPaletteQualitativeHue1" size="M" alignContent="Right"
+					totalScale="%">
+					<mc:items>
+						<mc:HarveyBallMicroChartItem id="_IDGenHarveyBallMicroChartItemThird" fraction="0"
+							fractionScale="%" />
+					</mc:items>
+				</mc:HarveyBallMicroChart>
+				<HBox id="_IDGenHBox212" class="sapUiSmallMarginTop" direction="Row" justifyContent="SpaceAround">
+					<Label id="_IDGenLabel112" class="label-text" text="Fournisseurs Personne physique" design="Bold" />
+				</HBox>
+			</VBox>
+	
+		</HBox>
 		<!-- Tiles Statistics - End -->
 
 		<!-- Grid Table - Start -->

@@ -69,4 +69,12 @@
     width: 45%!important;
 }
 
+.hbox-container{
+    padding: 2em;
+    background:white;
+}
+
+.sapSuiteHBMCValueContainer, .label-text{
+    color: black;
+}
 /* VendordMain CSS - End */
