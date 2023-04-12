@@ -97,13 +97,21 @@
       },
       "routes": [
         {
-          "name": "RouteVendorsMain",
+          "name": "RouteMMHome",
           "pattern": ":?query:",
+          "target": [
+            "TargetMMHome"
+          ]
+        },
+        {
+          "name": "RouteVendorsMain",
+          "pattern": "vendors/",
           "target": [
             "TargetVendorsMain"
           ]
         }
-        ,{
+        ,
+        {
           "name": "RouteVendorSingleObjectPage",
           "pattern": "vendors/{id}",
           "target" : [
@@ -113,6 +121,13 @@
         }
       ],
       "targets": {
+        "TargetMMHome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Home",
+          "viewName": "Home"
+        },
         "TargetVendorsMain": {
           "viewType": "XML",
           "transition": "slide",
