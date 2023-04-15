@@ -24,7 +24,7 @@
 			<!-- Header of the page - Title info - Start -->
 			 <ObjectHeader
                 id="_IDGenObjectHeader1"
-                title="#{Lifnr}"
+                title="Identifiant - #{Lifnr}"
                 backgroundDesign="Solid"
                 class="objectHeader-title"
             >
@@ -34,7 +34,7 @@
 
 
 			<!-- Donut chart - Start -->
-			<!-- <viz:Popover id="idPopOver"></viz:Popover>
+			<viz:Popover id="idPopOver"></viz:Popover>
 			<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='donut' vizProperties="{title:{ text:'ETAT DES COMMANDES DU FOURNISSEUR'}, plotArea:{colorPalette:['#0000FF', '#00FF00', '#FF0000']}}">
 				<viz:dataset>
 					<viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/myData}">
@@ -52,7 +52,7 @@
 					<viz.feeds:FeedItem id="_IDGenFeedItem1" uid="size" type="Measure" values="Nombre" />
 					<viz.feeds:FeedItem id="_IDGenFeedItem2" uid="color" type="Dimension" values="Commande" />
 				</viz:feeds>
-			</viz:VizFrame> -->
+			</viz:VizFrame>
 			<!-- Donut chart - End -->
 
 
@@ -85,7 +85,7 @@
 					
 					<!-- Tab des commandes - Start -->
                     <IconTabFilter id="_IDGenIconTabFilter2" key="attachments" text="Commandes">
-                        <List id="_IDGenList1" headerText="Liste des Réservations" items="{oListModel>/}" showSeparators="Inner">
+                        <List id="_IDGenList1" headerText="Liste des Commandes" items="{oListModel>/}" showSeparators="Inner">
 								<StandardListItem 
 									id="_IDGenStandardListItem1"
 									icon="sap-icon://bbyd-active-sales"

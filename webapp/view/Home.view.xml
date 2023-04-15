@@ -4,9 +4,10 @@
         xmlns="sap.m"
         xmlns:layout="sap.ui.layout"
         xmlns:f="sap.f"
-        	xmlns:core="sap.ui.core"
+        xmlns:core="sap.ui.core"
         xmlns:w="sap.ui.integration.widgets"
-        	xmlns:card="sap.f.cards"
+        xmlns:card="sap.f.cards"
+        xmlns:main="sap.ui.webc.main"
 	>
 
     <Page id="_IDGenPage1" title="{i18n>hometitle}">
@@ -38,6 +39,7 @@
                 </GenericTile>
 			</layout:HorizontalLayout>
             <!-- Quick Navigation Meny - End -->			
+
 
 		</layout:VerticalLayout>
 

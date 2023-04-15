@@ -92,14 +92,14 @@
 						tooltip="enable select all items"
 						change="onSwitchChange"/>
 				</OverflowToolbar>
-				<OverflowToolbar id="_IDGenOverflowToolbar2" >
+				<!-- <OverflowToolbar id="_IDGenOverflowToolbar2" >
 					<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
 					<SearchField id="_IDGenSearchField1"
 								placeholder="Filter"
 								value="{ui>/globalFilter}"
 								search="filterGlobally"
 								width="15rem"/>
-				</OverflowToolbar>
+				</OverflowToolbar> -->
 			</table:extension>
             <table:columns>
                 <!-- Columns Group  1 : Product & SalesOrder - Start -->

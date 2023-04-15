@@ -6,8 +6,8 @@ sap.ui.define(
       "use strict";
   
       return BaseController.extend("vendors.controller.App", {
-        onInit() {
-        }
+        
+        
       });
     }
   );

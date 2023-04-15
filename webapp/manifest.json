@@ -109,16 +109,15 @@
           "target": [
             "TargetVendorsMain"
           ]
-        }
-        ,
+        },
         {
           "name": "RouteVendorSingleObjectPage",
           "pattern": "vendors/{id}",
           "target" : [
               "TargetVendorSingleObjectPage"
           ]
-
         }
+
       ],
       "targets": {
         "TargetMMHome": {
